@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#303439</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="blue">#629AF7</color>
+    <color name="tabColor">#D3A384</color>
+    <color name="green">#11B118</color>
+    <color name="red">#B50E0E</color>
+    <color name="input_bg">#DCDCDC</color>
+    <color name="transparent">#00FFFFFF</color>
+</resources>

@@ -1,0 +1,10 @@
+package com.adrian.quizapppersonalproject.ui.screens.login.viewModel
+
+interface LoginViewModel {
+
+    fun login(
+        email: String,
+        pass: String
+    )
+
+}

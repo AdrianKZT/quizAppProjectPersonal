@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/loginFragment">
+
+    <action
+        android:id="@+id/toLogin"
+        app:destination="@id/loginFragment"
+        app:popUpTo="@id/loginFragment"
+        app:popUpToInclusive="false" />
+
+    <action
+        android:id="@+id/toStudentHome"
+        app:destination="@+id/tabContainerFragment"
+        app:popUpTo="@id/toStudentHome"
+        app:popUpToInclusive="true" />
+
+    <action
+        android:id="@+id/toTeacherHome"
+        app:destination="@+id/teacherTabContainerFragment"
+        app:popUpTo="@id/toTeacherHome"
+        app:popUpToInclusive="true" />
+
+    <fragment
+        android:id="@+id/loginFragment"
+        android:name="com.adrian.quizapppersonalproject.ui.screens.login.LoginFragment"
+        android:label="LoginFragment"
+        tools:layout="@layout/fragment_login">
+        <action
+            android:id="@+id/action_login_to_register"
+            app:destination="@id/registerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/registerFragment"
+        android:name="com.adrian.quizapppersonalproject.ui.screens.register.RegisterFragment"
+        android:label="RegisterFragment"
+        tools:layout="@layout/fragment_register" />
+
+    <fragment
+        android:id="@+id/studentHomeFragment"
+        android:name="com.adrian.quizapppersonalproject.ui.screens.Student.StudentHomeFragment"
+        android:label="fragment_student_home"
+        tools:layout="@layout/fragment_student_home"/>
+    <fragment
+        android:id="@+id/teacherHomeFragment"
+        android:name="com.adrian.quizapppersonalproject.ui.screens.Teacher.TeacherHomeFragment"
+        android:label="fragment_teacher_home"
+        tools:layout="@layout/fragment_teacher_home">
+        <action
+            android:id="@+id/action_teacherHomeFragment_to_addQuizFragment"
+            app:destination="@id/addQuizFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/tabContainerFragment"
+        android:name="com.adrian.quizapppersonalproject.ui.screens.tabcontainer.TabContainerFragment"
+        android:label="fragment_tab_container"
+        tools:layout="@layout/fragment_tab_container" >
+        <action
+            android:id="@+id/action_tabContainer_to_quizHomePage"
+            app:destination="@id/quizHomePageFragment" />
+        <action
+            android:id="@+id/action_tabContainerFragment_to_studentHomeFragment"
+            app:destination="@id/studentHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/quizPageFragment"
+        android:name="com.adrian.quizapppersonalproject.ui.screens.ShowQuizQuestionPage.ShowQuizPageFragment"
+        android:label="fragment_quiz_page"
+        tools:layout="@layout/fragment_quiz_page">
+        <argument
+            android:name="quiz_id"
+            app:argType="string" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/quizHomePageFragment"
+        android:name="com.adrian.quizapppersonalproject.ui.screens.QuizHomePage.QuizHomePageFragment"
+        android:label="fragment_quiz_home_page"
+        tools:layout="@layout/fragment_quiz_home_page">
+        <argument
+            android:name="quiz_id"
+            app:argType="string" />
+        <action
+            android:id="@+id/action_quizHomePage_to_quizPage"
+            app:destination="@id/quizPageFragment"
+            app:popUpTo="@id/quizHomePageFragment"
+            app:popUpToInclusive="true"
+            />
+    </fragment>
+    <fragment
+        android:id="@+id/teacherTabContainerFragment"
+        android:name="com.adrian.quizapppersonalproject.ui.screens.tabcontainer.TeacherTabContainerFragment"
+        android:label="fragment_teacher_tab_container"
+        tools:layout="@layout/fragment_teacher_tab_container">
+        <action
+            android:id="@+id/action_teacherTabContainerFragment_to_teacherHomeFragment"
+            app:destination="@id/teacherHomeFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/addQuizFragment"
+        android:name="com.adrian.quizapppersonalproject.ui.screens.AddQuiz.AddQuizFragment"
+        android:label="fragment_add_quiz"
+        tools:layout="@layout/fragment_add_quiz" />
+</navigation>
