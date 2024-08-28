@@ -15,7 +15,8 @@ Teachers and Students get to see the leaderboard with the score for each quizzes
 
 
 # Screenshots
-## If the images do not appear, kindly click the link to view them on Google Slides. [Google Slides](https://docs.google.com/presentation/d/1jcxPmrJLf9d8LzZsYta_gyXqr026qTtSNzbk2hTiVVM/edit?usp=sharing)
+## If the images do not appear, kindly click the link to view them on [Google Slides](https://docs.google.com/presentation/d/1jcxPmrJLf9d8LzZsYta_gyXqr026qTtSNzbk2hTiVVM/edit?usp=sharing).
+
 <table>
   <tr>
     <td>
